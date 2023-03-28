@@ -43,3 +43,6 @@ Thumbs.db
 
 #Nvim logs
 .nvimlog
+
+#Environment
+/src/environment.ts
