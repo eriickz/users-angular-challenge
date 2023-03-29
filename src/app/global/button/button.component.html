@@ -1,5 +1,3 @@
-<button
-  class="font-serif font-semibold text-white bg-button-new text-center text-xs py-2.5 px-8 rounded hover:opacity-75"
->
-  {{ label }}
+<button [ngClass]="classes">
+  <ng-content></ng-content>
 </button>

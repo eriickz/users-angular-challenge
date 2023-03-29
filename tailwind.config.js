@@ -20,6 +20,10 @@ module.exports = {
         "input-gray": "#E3E3E3",
         "input-placeholder": "#B7B7B7",
       },
+      boxShadow: {
+        "user-item": "0px 0px 10px rgba(2, 184, 151, 0.25)",
+        "user-form": "0px 0px 6px rgba(2, 184, 151, 0.25)",
+      },
     },
   },
   plugins: [],

@@ -6,7 +6,7 @@ import { GlobalModule } from "./global/global.module";
 import { UserModule } from "./user/user.module";
 
 const routes: Routes = [
-  { path: "", component: UserListComponent },
+  { path: "", redirectTo: "/user-list", pathMatch: "full" },
   { path: "user-list", component: UserListComponent },
   { path: "new-user", component: UserFormComponent },
   { path: "edit-user/:id", component: UserFormComponent },

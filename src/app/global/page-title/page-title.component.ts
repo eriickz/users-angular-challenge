@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-page-title",
@@ -7,5 +8,12 @@ import { Component, Input } from "@angular/core";
 export class PageTitleComponent {
   @Input() title = "Page Title";
   @Input() description = "Page short description";
-  @Input("button-label") buttonLabel = "Add User";
+  @Input() buttonLabel = "";
+  @Input() iconPositionClass = "right-[90px]";
+
+  constructor(private router: Router) {}
+
+  navigateToUserForm() {
+    this.router.navigate(["/new-user"]);
+  }
 }

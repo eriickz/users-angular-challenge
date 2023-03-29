@@ -1,1 +1,11 @@
-<p>user-form works!</p>
+<section class="bg-main h-screen w-full flex justify-center items-center">
+  <div class="bg-white rounded-lg max-w-[564px] min-h-[555px] py-8 px-10">
+    <app-page-title title="User Form" description="Add users to the platform" iconPositionClass="ml-[465px]" />
+    <div class="bg-white py-6 px-5 shadow-user-form rounded-md flex flex-col items-center">
+      <img src="https://xsgames.co/randomusers/avatar.php?g=male" class="w-32 rounded-md text-center mb-6" alt="user-avatar" />
+      <div class="flex flex-wrap self-start justify-between gap-y-4">
+        <app-form-control *ngFor="let form of formControlsProps" [formControlProps]="form" />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,7 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Input } from "@angular/core";
+import User from "../types";
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
+  selector: "app-user-list",
+  templateUrl: "./user-list.component.html",
 })
-export class UserListComponent {}
+export class UserListComponent {
+  @Input() users: User[] = [
+    {
+      firstname: "Eric",
+      lastname: "Rodriguez Montilla",
+      avatar: "",
+    },
+  ];
+}
