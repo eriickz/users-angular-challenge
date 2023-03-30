@@ -1,9 +1,0 @@
-<div [ngClass]="['flex flex-col font-serif text-base gap-y-1.5', formControlProps.isFull ? 'w-full' : 'w-auto']">
-  <label for="{{ formControlProps.id }}" class="text-gray">{{ formControlProps.label }}</label>
-  <input
-    id="{{ formControlProps.id }}"
-    class="border border-input-gray rounded-sm py-2 px-2.5 placeholder:text-input-placeholder placeholder:font-light"
-    type="{{ formControlProps.type }}"
-    placeholder="Insert..."
-  />
-</div>

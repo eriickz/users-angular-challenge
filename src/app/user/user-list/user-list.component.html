@@ -1,10 +1,11 @@
+<swal #confirmPopup title="Hurray!" text="" icon="success" [showCancelButton]="false" confirmButtonText="Okay!" confirmButtonColor="#0281B8" (confirm)="refetchUsers()" />
+<swal #errorPopup title="Error!" text="" icon="error" [showCancelButton]="true" [showConfirmButton]="false" cancelButtonText="Ok" />
+
 <section class="bg-main h-screen w-full flex justify-center items-center">
   <div class="bg-white rounded-lg min-h-[80%] w-[95%] py-8 px-10">
     <app-page-title title="Users List" description="List of users on the platform" buttonLabel="Add Users" />
     <div class="flex flex-wrap gap-10">
-      <app-user-item />
-      <app-user-item />
-      <app-user-item />
+      <app-user-item *ngFor="let user of users | async" [user]="user" (deleteUserEvent)="deleteUserById($event)" />
     </div>
   </div>
 </section>

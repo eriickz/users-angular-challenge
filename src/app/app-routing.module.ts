@@ -9,11 +9,11 @@ const routes: Routes = [
   { path: "", redirectTo: "/user-list", pathMatch: "full" },
   { path: "user-list", component: UserListComponent },
   { path: "new-user", component: UserFormComponent },
-  { path: "edit-user/:id", component: UserFormComponent },
+  { path: "update-user/:id", component: UserFormComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), GlobalModule, UserModule],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: "reload" }), GlobalModule, UserModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
